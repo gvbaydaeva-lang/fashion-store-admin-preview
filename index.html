@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Выгодные покупки — панель управления</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="admin-preview" aria-live="polite">
+      <section class="login-screen" data-screen="login" aria-labelledby="login-title">
+        <div class="wordmark" aria-label="Выгодные покупки">
+          <span class="wordmark__mark">В</span>
+          <span>Выгодные покупки</span>
+        </div>
+
+        <div class="login-card">
+          <p class="eyebrow">ПАНЕЛЬ ВЛАДЕЛЬЦА</p>
+          <h1 id="login-title">Закрытая панель управления</h1>
+          <p class="login-card__lead">Управляйте товарами и заказами в одном месте. Вход будет подтверждаться только ключом вашего устройства.</p>
+
+          <div class="preview-notice" role="status">
+            <span class="preview-notice__dot" aria-hidden="true"></span>
+            <div>
+              <strong>Предпросмотр интерфейса</strong>
+              <p>Данные магазина ещё не подключены. Этот экран не выполняет вход и ничего не меняет.</p>
+            </div>
+          </div>
+
+          <button class="button button--primary" type="button" data-preview-open>Посмотреть интерфейс</button>
+          <button class="button button--quiet" type="button" disabled>Вход пока недоступен</button>
+          <p class="login-card__footnote">Когда безопасный доступ будет настроен, здесь появится вход через Face ID, Touch ID или PIN устройства.</p>
+        </div>
+      </section>
+
+      <section class="dashboard" data-screen="dashboard" hidden aria-labelledby="dashboard-title" tabindex="-1">
+        <header class="dashboard__header">
+          <div class="wordmark wordmark--compact">
+            <span class="wordmark__mark">В</span>
+            <span>Выгодные покупки</span>
+          </div>
+          <button class="back-button" type="button" data-preview-close aria-label="Вернуться к экрану входа">Закрыть просмотр</button>
+        </header>
+
+        <div class="dashboard__intro">
+          <div>
+            <p class="eyebrow">ПРЕДПРОСМОТР</p>
+            <h1 id="dashboard-title">Сегодня в магазине</h1>
+            <p>Так будет выглядеть главная после безопасного входа.</p>
+          </div>
+          <span class="preview-badge">Без данных</span>
+        </div>
+
+        <section class="overview-grid" aria-label="Сводка магазина">
+          <article class="metric metric--accent">
+            <span class="metric__label">Новые заказы</span>
+            <strong class="metric__value">—</strong>
+            <span class="metric__hint">появятся после подключения</span>
+          </article>
+          <article class="metric">
+            <span class="metric__label">Товары без остатка</span>
+            <strong class="metric__value">—</strong>
+            <span class="metric__hint">проверка по каталогу</span>
+          </article>
+          <article class="metric">
+            <span class="metric__label">Черновики</span>
+            <strong class="metric__value">—</strong>
+            <span class="metric__hint">будут сохранены на сервере</span>
+          </article>
+          <article class="metric">
+            <span class="metric__label">Опубликовано</span>
+            <strong class="metric__value">—</strong>
+            <span class="metric__hint">текущие карточки каталога</span>
+          </article>
+        </section>
+
+        <section class="action-panel" aria-labelledby="actions-title">
+          <div>
+            <p class="eyebrow">БЫСТРЫЕ ДЕЙСТВИЯ</p>
+            <h2 id="actions-title">Рабочие разделы</h2>
+          </div>
+          <div class="action-list">
+            <button type="button" disabled><span>Добавить товар</span><small>Скоро</small></button>
+            <button type="button" disabled><span>Открыть товары</span><small>Скоро</small></button>
+            <button type="button" disabled><span>Открыть заказы</span><small>Скоро</small></button>
+          </div>
+        </section>
+
+        <nav class="bottom-nav" aria-label="Разделы админки">
+          <button type="button" class="bottom-nav__item bottom-nav__item--active" disabled><span aria-hidden="true">⌂</span>Главная</button>
+          <button type="button" class="bottom-nav__item" disabled><span aria-hidden="true">□</span>Товары</button>
+          <button type="button" class="bottom-nav__item" disabled><span aria-hidden="true">◌</span>Заказы</button>
+          <button type="button" class="bottom-nav__item" disabled><span aria-hidden="true">⊙</span>Доступ</button>
+        </nav>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
